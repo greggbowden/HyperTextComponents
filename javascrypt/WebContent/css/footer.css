@@ -1,0 +1,31 @@
+@media screen and (max-width: 480px) {
+	#footer{
+		display:none;
+		padding: 1%;
+		width: 96%;
+		border:solid 1px #ccc;
+		margin: 1% auto; 
+		clear:left;
+	}
+}
+
+@media screen and (min-width: 481px){
+	#footer{
+	clear:left;
+	text-align:center;
+	border-top:1px solid#000;
+	background-color:#000;
+	margin: 1% auto; 
+	padding: 1%;
+	width: 96%;
+	}
+	
+	#footernav{
+		margin:0px auto;
+		text-align:center;
+	}
+	
+	#footernav a{
+		color:#fff;
+	}
+}

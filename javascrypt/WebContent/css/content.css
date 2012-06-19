@@ -1,0 +1,26 @@
+@media screen and (max-width: 480px) {
+  .content{
+		float: left;
+		min-width: 220px;
+		width: 90%;
+		padding: 1%;
+		margin-right: 2%;
+		margin-left:2%;
+		text-align:justify;
+		overflow:auto;
+		margin-bottom:3%;
+	}
+}
+
+@media screen and (min-width: 481px) {
+  .content{
+		float: left;
+		min-width: 520px;
+		max-width: 60%;
+		padding: 5px;
+		margin-right: 1%;
+		margin-left: 2%px;
+		overflow:auto;
+		margin-bottom:3%;
+	}
+}

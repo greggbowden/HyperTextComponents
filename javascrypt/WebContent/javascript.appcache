@@ -1,0 +1,27 @@
+CACHE MANIFEST
+# 2012-05-16:v1
+# Explicitly cached 'master entries'.
+index.html
+link1.html
+link2.html
+link3.html
+components/body.html
+components/content.html
+components/content1.html
+components/content2.html
+components/content3.html
+components/footer.html
+components/header.html
+components/nav.html
+
+# Additional resources to cache
+CACHE:
+images/BCSheader.jpg
+css/body.css
+css/content.css
+css/content1.css
+css/footer.css
+css/header.css
+css/nav.css
+js/javascrypt.js
+js/dbscrypt.js

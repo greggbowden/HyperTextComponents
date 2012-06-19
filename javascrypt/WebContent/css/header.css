@@ -1,0 +1,27 @@
+#header{
+	background-color:#000;
+	display:block;
+	overflow:auto;
+}
+
+#headerImg{
+		min-width:480px;
+		width:100%;
+		max-width:640px;
+}
+
+@media screen and (max-width: 480px) {
+	#header img{
+		min-width:200px;
+		width:100%;
+		max-width:400px;
+	}
+}
+
+@media screen and (min-width: 481px) {
+#header img{
+		min-width:480px;
+		width:100%;
+		max-width:640px;
+	}
+}
