@@ -32,3 +32,10 @@ Example:<br/>
 &nbsp;&nbsp;	&lt;/body&gt;<br/>
 &nbsp;&nbsp;	<b>&lt;script type="text/javascript" src="js/javascrypt.js"&gt;&lt;/script&gt;</b><br/>
 &lt;/html&gt;<br/>
+
+Yes, I realize that the component tag does not comply with xHTML, and the regex pattern can be adjusted... but I haven't done that yet.
+
+Next steps for the project:
+1 - add tests for recursive components to determine impact on performance.
+2 - try to optimize inclusion with fewer AJAX calls.
+3 - browser compatibility
