@@ -33,6 +33,8 @@ Example:<br/>
 &nbsp;&nbsp;	<b>&lt;script type="text/javascript" src="js/javascrypt.js"&gt;&lt;/script&gt;</b><br/>
 &lt;/html&gt;<br/>
 
+I would really appreciate any feedback, suggestions or help if anyone is interested: <a href="mailto:gregg@blackchicken.ca">gregg@blackchicken.ca</a>
+
 Yes, I realize that the component tag does not comply with xHTML, and the regex pattern can be adjusted... but I haven't done that yet.
 
 Next steps for the project:
