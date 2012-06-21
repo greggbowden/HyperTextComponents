@@ -13,8 +13,7 @@
 	#footer{
 	clear:left;
 	text-align:center;
-	border-top:1px solid#000;
-	background-color:#000;
+	border:1px solid#ccc;
 	margin: 1% auto; 
 	padding: 1%;
 	width: 96%;
@@ -26,6 +25,6 @@
 	}
 	
 	#footernav a{
-		color:#fff;
+		color:#000;
 	}
 }

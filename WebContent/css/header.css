@@ -1,27 +1,18 @@
 #header{
-	background-color:#000;
+	background-color:#FFF;
 	display:block;
 	overflow:auto;
-}
-
-#headerImg{
-		min-width:480px;
-		width:100%;
-		max-width:640px;
+	font-size:200%;
 }
 
 @media screen and (max-width: 480px) {
-	#header img{
-		min-width:200px;
-		width:100%;
-		max-width:400px;
+	#header {
+		font-size:140%;
 	}
 }
 
 @media screen and (min-width: 481px) {
 #header img{
-		min-width:480px;
-		width:100%;
-		max-width:640px;
+		font-size:170%;
 	}
 }
