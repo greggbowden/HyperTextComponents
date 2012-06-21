@@ -6,7 +6,7 @@
 **/
 javasCrypt = {};
 javasCrypt.view = {};
-javasCrypt.model = {};
+
 debug=false;
 /* Find the first instance (index = 0) of the head tag*/
 he = document.getElementsByTagName("head")[0];
