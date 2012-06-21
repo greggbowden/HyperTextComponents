@@ -18,12 +18,12 @@ Example:<br/>
 &nbsp;&nbsp;	&lt;/head&gt;<br/>
 &nbsp;&nbsp;	&lt;body&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;		&lt;div id="page"&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;			<b>&lt;component id="header" htmlsrc="components/header.html" csssrc="css/header.css"&gt;&lt;/component&gt;</b><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;			<b>&lt;component id="nav" htmlsrc="components/nav.html" csssrc="css/nav.css"&gt;&lt;/component&gt;</b><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;			&lt;div&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				<b>&lt;component id="content" htmlsrc="components/content.html" csssrc="css/content.css" cssclass="content"&gt;&lt;/component&gt;</b><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				<b>&lt;component id="content1" htmlsrc="components/content1.html" cssclass="subcontent"&gt;&lt;/component&gt;</b><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;			&lt;/div&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			<b>&lt;component id="header" htmlsrc="components/header.html" csssrc="css/header.css"&gt;&lt;/component&gt;</b><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			<b>&lt;component id="nav" htmlsrc="components/nav.html" csssrc="css/nav.css"&gt;&lt;/component&gt;</b><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			&lt;div&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				<b>&lt;component id="content" htmlsrc="components/content.html" csssrc="css/content.css" cssclass="content"&gt;&lt;/component&gt;</b><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				<b>&lt;component id="content1" htmlsrc="components/content1.html" cssclass="subcontent"&gt;&lt;/component&gt;</b><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			&lt;/div&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			<b>&lt;component id="footer" htmlsrc="components/footer.html" csssrc="css/footer.css"&gt;&lt;/component&gt;</b><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;		&lt;/div&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;		&lt;div id="loading"&gt;<br/>
