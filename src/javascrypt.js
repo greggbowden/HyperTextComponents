@@ -1,7 +1,7 @@
 /**
 * author - Gregg Bowden
-* date - February 2012
-* version - 1.0.5
+* date - June 2012
+* version - 1.0.6
 * email - gregg@blackchicken.ca
 **/
 javasCrypt = {};
@@ -25,13 +25,13 @@ javasCrypt = new function(){
 			//check the document object for component tags
 			var tags = getComponents(document);
 			if(tags != null){
+				
 				//load components using AJAX and store as a key value pair
 				//note: component content must be a valid XML document with a root node.
 				var comps = readComponents(tags);
 				debug?console.log(comps):null;
 				
-				//read the components from the content loaded from components at level1
-				
+				//read the components from the content loaded from components at first level
 				if(comps.length > 0){
 					for(var c=0;c < comps.length; c++){
 						var comp = readSubComponents(comps[c]);
