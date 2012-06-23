@@ -14,14 +14,16 @@ he = document.getElementsByTagName("head")[0];
 /* Find the first instance of the body tag*/
 bo = document.getElementsByTagName("body")[0];
 
+/*the component tag pattern for regex match*/
 pattern = /<component(.*?)><\/component>/g;
 
 javasCrypt = new function(){
 	showLoading();
 	javasCrypt.view = new function(){
-		debug?console.log("View"):null;
+		debug?console.log("view"):null;
 		javasCrypt.view.Init = new function(){
 			debug?console.log("init"):null;
+			
 			//check the document object for component tags
 			var tags = getComponents(document);
 			if(tags != null){
@@ -53,13 +55,24 @@ javasCrypt = new function(){
 		};
 	};
 	
+	/*iterate through components object list, create component objects from each and load via AJAX*/ 
 	function readComponents(comps){
 		var contentObjs = new Array();
 		//console.log(comps.length);
 		for(var c=0;c < comps.length; c++){
 			var comp = new Component(comps[c]);
 			//console.log(comp._htmlsrc);
-			var xhr = new XMLHttpRequest();
+			
+			var xhr;
+			if(XMLHttpRequest){
+				// ...use native XMLHttpRequest for IE7 and higher
+				xhr = new XMLHttpRequest();
+			}else{
+				if (window.ActiveXObject) {
+					// ...otherwise, use the ActiveX control for IE5.x and IE6.
+					xhr = new ActiveXObject('MSXML2.XMLHTTP.3.0');
+				}
+			}
 			xhr.open("GET", comp._htmlsrc, false);
 			xhr.setRequestHeader("Content-Type", "text/html;charset=UTF-8");
 			xhr.onreadystatechange = function(){
@@ -118,8 +131,21 @@ javasCrypt = new function(){
 	*
 	*/
 	function stringToHTMLObject(htmlStr){
-		var domParser = new DOMParser();
-		return domParser.parseFromString(htmlStr, "text/xml").firstChild;
+		
+		var htmlObj = null; 
+		if (window.DOMParser)
+		  {
+			var domParser = new DOMParser();
+			htmlObj = domParser.parseFromString(htmlStr, "text/xml").firstChild;
+		  }
+		else // Internet Explorer
+		  {
+		  xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+		  xmlDoc.async=false;
+		  xmlDoc.loadXML(htmlStr);
+		  htmlObj = xmlDoc
+		  }
+		return htmlObj;
 	}
 	
 	/**
@@ -143,7 +169,7 @@ javasCrypt = new function(){
 	}
 	
 	/**
-	*find all component tags in the object only
+	*iterate through component objects and call writeComponent
 	*
 	*/
 	function writeComponents(comps){
@@ -156,7 +182,7 @@ javasCrypt = new function(){
 	}
 	
 	/**
-	*find all component tags in the object only
+	*write the CSS elements to the DOM
 	*
 	*/
 	function writeCSS(comp,he){
@@ -174,7 +200,7 @@ javasCrypt = new function(){
 	}
 	
 	/**
-	*find all component tags in the object only
+	*write the JavaScript elements to the DOM
 	*
 	*/
 	function writeJS(comp,he){
@@ -191,21 +217,35 @@ javasCrypt = new function(){
 	}
 	
 	/**
-	*find all component tags in the object only
+	*return outerHTML if supported otherwise run node through XMLSerializer
 	*
 	*/
 	function outerHTML(node){
-		return node.outerHTML || new XMLSerializer().serializeToString(node);
+		if(XMLSerializer){
+			return node.outerHTML || new XMLSerializer().serializeToString(node);
+		}else{
+			try {
+			      // Internet Explorer.
+			      return node.xml;
+			    }
+			    catch (e)
+			    {//Strange Browser ??
+			     alert('Xmlserializer not supported');
+			    }
+		}
 	}
 	
 	/**
-	*find all component tags in the object only
+	*replacement function... not used at the moment.
 	*
 	*/
 	String.prototype.replaceAt=function(index, char) {
       return this.substr(0, index) + char + this.substr(index+char.length);
    }
 	
+	/*
+	 * Component object model
+	 */
 	function Component(tagObj){
 		/*check tag attributes*/
 		if(typeof tagObj != 'undefined'){
@@ -254,23 +294,44 @@ javasCrypt = new function(){
 		}
 	};
 	
+	/*
+	 * onload page loading modal dialogue
+	 */
 	function showLoading(){
 		var loading = document.getElementById('loading');
 		loading.style.display = 'block';
 	}
 
+	/*
+	 * hide onload page loading modal dialogue
+	 */
 	function hideLoading(){
 		var alreadyrunflag=0; //flag to indicate whether target function has already been run
 		var loading = document.getElementById('loading');
 		var page = document.getElementById('page');
-		document.addEventListener("DOMContentLoaded", 
-			new function(){
+		
+		if(document.addEventListener){
+			document.addEventListener("DOMContentLoaded", 
+				new function(){
+					console.log(alreadyrunflag);
+					alreadyrunflag=1
+					loading.style.display = 'none';
+					page.style.display = 'block';
+				}, false);
+		}else{
+			document.attachEvent("DOMContentLoaded", 
+					new function(){
 				console.log(alreadyrunflag);
 				alreadyrunflag=1
 				loading.style.display = 'none';
 				page.style.display = 'block';
 			}, false);
+		}
 	}
 	eval(javasCrypt);
-	window.onload = hideLoading();
+	
+	window.onload = function (){
+		hideLoading();
+	}
+	
 };
