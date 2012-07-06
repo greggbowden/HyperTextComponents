@@ -298,6 +298,18 @@ javasCrypt = new function(){
 	 * onload page loading modal dialogue
 	 */
 	function showLoading(){
+		
+		var loadingDiv = document.createElement('DIV');
+		loadingDiv.setAttribute('id','loading');
+		
+		
+		var loadingAniDiv = document.createElement('DIV');
+		loadingAniDiv.setAttribute('id','loadingani');
+		loadingAniDiv.innerHTML = "Loading...";
+		loadingDiv.appendChild(loadingAniDiv);
+		
+		bo.appendChild(loadingDiv);
+		
 		var loading = document.getElementById('loading');
 		loading.style.display = 'block';
 	}
