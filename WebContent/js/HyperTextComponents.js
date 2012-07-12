@@ -14,9 +14,6 @@ he = document.getElementsByTagName("head")[0];
 /* Find the first instance of the body tag*/
 bo = document.getElementsByTagName("body")[0];
 
-/*the component tag pattern for regex match*/
-pattern = /<component(.*?)><\/component>/g;
-
 javasCrypt = new function(){
 	showLoading();
 	javasCrypt.view = new function(){
@@ -209,7 +206,7 @@ javasCrypt = new function(){
 				var js = document.createElement("SCRIPT");
 				js.type = 'text/javascript';
 				js.src = comp._jssrc;
-				he.appendChild(js);
+				bo.appendChild(js);
 			}catch(err){
 				console.log(err.message);
 			}
@@ -325,25 +322,27 @@ javasCrypt = new function(){
 		if(document.addEventListener){
 			document.addEventListener("DOMContentLoaded", 
 				new function(){
-					console.log(alreadyrunflag);
+					//console.log(alreadyrunflag);
 					alreadyrunflag=1
 					loading.style.display = 'none';
 					page.style.display = 'block';
 				}, false);
 		}else{
 			document.attachEvent("DOMContentLoaded", 
-					new function(){
-				console.log(alreadyrunflag);
-				alreadyrunflag=1
-				loading.style.display = 'none';
-				page.style.display = 'block';
-			}, false);
+				new function(){
+					//console.log(alreadyrunflag);
+					alreadyrunflag=1
+					loading.style.display = 'none';
+					page.style.display = 'block';
+				}, false);
 		}
 	}
 	eval(javasCrypt);
 	
-	window.onload = function (){
-		hideLoading();
+	if(document.addEventListener){
+		document.addEventListener("DOMContentLoaded", hideLoading);
+	}else{
+		document.attachEvent("DOMContentLoaded", hideLoading);
 	}
 	
 };
