@@ -4,21 +4,21 @@
 * version - 1.0.6
 * email - gregg@blackchicken.ca
 **/
-javasCrypt = {};
-javasCrypt.view = {};
+hyperTextComponents = {};
+hyperTextComponents.view = {};
 
 debug=false;
-/* Find the first instance (index = 0) of the head tag*/
+// Get the head tag
 he = document.getElementsByTagName("head")[0];
 
-/* Find the first instance of the body tag*/
+// Get the body tag
 bo = document.getElementsByTagName("body")[0];
 
-javasCrypt = new function(){
+hyperTextComponents = new function(){
 	showLoading();
-	javasCrypt.view = new function(){
+	hyperTextComponents.view = new function(){
 		debug?console.log("view"):null;
-		javasCrypt.view.Init = new function(){
+		hyperTextComponents.view.Init = new function(){
 			debug?console.log("init"):null;
 			
 			//check the document object for component tags
@@ -337,7 +337,7 @@ javasCrypt = new function(){
 				}, false);
 		}
 	}
-	eval(javasCrypt);
+	eval(hyperTextComponents);
 	
 	if(document.addEventListener){
 		document.addEventListener("DOMContentLoaded", hideLoading);

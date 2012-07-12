@@ -1,9 +1,9 @@
-javascrypt
+HyperTextComponents
 ==========
 
 One of the biggest problems I've run into in building browser based applications in HTML5 is the inability to use includes in HTML.
 
-As a result I've started working on a <b>component</b> based HTML includes framework for browser based applications which can extend into mobile app world.
+As a result I've started working on a <b>component</b> based HTML includes framework for browser based applications which can extend into the mobile app world.
 
 Example:<br/>
 <br/>
@@ -30,7 +30,7 @@ Example:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;div id="loadingani"&gt;loading...&lt;/div&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;		&lt;/div&gt;<br/>
 &nbsp;&nbsp;	&lt;/body&gt;<br/>
-&nbsp;&nbsp;	<b>&lt;script type="text/javascript" src="js/javascrypt.js"&gt;&lt;/script&gt;</b><br/>
+&nbsp;&nbsp;	<b>&lt;script type="text/javascript" src="js/HyperTextComponents.js"&gt;&lt;/script&gt;</b><br/>
 &lt;/html&gt;<br/>
 
 I would really appreciate any feedback, suggestions or help if anyone is interested: <a href="mailto:gregg@blackchicken.ca">gregg@blackchicken.ca</a>
