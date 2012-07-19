@@ -17,6 +17,8 @@
 	margin: 1% auto; 
 	padding: 1%;
 	width: 96%;
+	position:absolute;
+	bottom:0px;
 	}
 	
 	#footernav{
