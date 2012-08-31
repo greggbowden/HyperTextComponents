@@ -13,13 +13,13 @@ Example:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;		&lt;meta http-equiv="PRAGMA" content="NO-CACHE"&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;		&lt;meta http-equiv="CACHE-CONTROL" content="NO-CACHE"&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;		&lt;meta http-equiv="EXPIRES" content="Tue, 31 Jan 2012 12:00:01 GMT"&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;		&lt;title&gt;JavasCrypt&lt;/title&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;		&lt;title&gt;Hyper Text Components&lt;/title&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;		&lt;link type="text/css" rel="stylesheet" href="css/body.css"/&gt;<br/>
 &nbsp;&nbsp;	&lt;/head&gt;<br/>
 &nbsp;&nbsp;	&lt;body&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;		&lt;div id="page"&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			<b>&lt;component id="header" htmlsrc="components/header.html" csssrc="css/header.css"&gt;&lt;/component&gt;</b><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			<b>&lt;component id="nav" htmlsrc="components/nav.html" csssrc="css/nav.css"&gt; jssrc="js/nav.js" &lt;/component&gt;</b><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			<b>&lt;component id="nav" htmlsrc="components/nav.html" csssrc="css/nav.css" jssrc="js/nav.js"&gt;&lt;/component&gt;</b><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			&lt;div&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				<b>&lt;component id="content" htmlsrc="components/content.html" csssrc="css/content.css" cssclass="content"&gt;&lt;/component&gt;</b><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				<b>&lt;component id="content1" htmlsrc="components/content1.html" cssclass="subcontent"&gt;&lt;/component&gt;</b><br/>
