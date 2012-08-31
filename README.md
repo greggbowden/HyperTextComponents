@@ -35,11 +35,11 @@ Example:<br/>
 
 I would really appreciate any feedback, suggestions or help if anyone is interested: <a href="mailto:gregg@blackchicken.ca">gregg@blackchicken.ca</a>
 
-Yes, I realize that the component tag does not comply with xHTML, and the regex pattern can be adjusted... but I haven't done that yet.
+Yes, I realize that the component tag does not comply with HTML standards... but we have to start somewhere.
 
 Next steps for the project:
 <ol>
-	<li>add tests for recursive components to determine impact on performance.</li>
-	<li>try to optimize inclusion with fewer AJAX calls.</li>
+	<li>add tests for recursive components to determine impact on performance</li>
+	<li>try to optimize inclusion with fewer AJAX calls</li>
 	<li>browser compatibility</li>
 </ol>
